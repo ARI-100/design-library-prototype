@@ -6,7 +6,7 @@ import styles from "./layout.module.css";
 
 const navItems = [
   { name: "Typography", href: "/docs/typography" },
-  // Future items e.g. { name: "Colors", href: "/docs/colors" }
+  { name: "Colors", href: "/docs/colors" },
 ];
 
 export default function DocsLayout({
