@@ -1,6 +1,35 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Roboto+Mono:wght@400;600;700&display=swap');
+
 :root {
   --background: #ffffff;
   --foreground: #171717;
+
+  /* Typography – font families */
+  --font-family-sans: 'Inter', Arial, sans-serif;
+  --font-family-mono: 'Roboto Mono', 'Courier New', monospace;
+
+  /* Typography – font weights */
+  --font-weight-regular: 400;
+  --font-weight-semibold: 600;
+  --font-weight-bold: 700;
+
+  /* Typography – font sizes */
+  --font-size-title-hero: 4.5rem;      /* 72px */
+  --font-size-title-page: 3rem;        /* 48px */
+  --font-size-subtitle: 2rem;          /* 32px */
+  --font-size-heading: 1.5rem;         /* 24px */
+  --font-size-subheading: 1.25rem;     /* 20px */
+  --font-size-body-base: 1rem;         /* 16px */
+  --font-size-body-small: 0.875rem;    /* 14px */
+
+  /* Typography – line heights */
+  --line-height-tight: 1;              /* Single-line styles */
+  --line-height-heading: 1.2;
+  --line-height-body: 1.4;
+
+  /* Typography – letter spacing */
+  --tracking-tight: -0.02em;           /* -2% */
+  --tracking-tighter: -0.03em;         /* -3% */
 }
 
 @media (prefers-color-scheme: dark) {
@@ -19,7 +48,7 @@ body {
 body {
   color: var(--foreground);
   background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-family-sans);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -39,4 +68,9 @@ a {
   html {
     color-scheme: dark;
   }
+}
+
+/* Monospace font family for code snippets */
+code, pre {
+  font-family: var(--font-family-mono);
 }
