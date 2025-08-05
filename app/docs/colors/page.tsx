@@ -87,14 +87,17 @@ export default function ColorsPage() {
           <h2>{cat.title}</h2>
           <div className={styles.grid}>
             {cat.colors.map((c) => {
-              const value = getComputedStyle(document.documentElement).getPropertyValue(c.variable);
+              const value =
+                typeof window !== "undefined"
+                  ? getComputedStyle(document.documentElement).getPropertyValue(c.variable).trim()
+                  : "";
               return (
                 <div key={c.variable}>
                   <div
                     className={styles.swatch}
                     style={{ background: `var(${c.variable})` }}
                   />
-                  <div className={styles.label}>{c.name}<br />{value.trim()}</div>
+                  <div className={styles.label}>{c.name}<br />{value}</div>
                 </div>
               );
             })}
