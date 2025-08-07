@@ -140,37 +140,37 @@ export default function CardsPage() {
           <tr>
             <td className={styles.td}><code className={styles.code}>variant</code></td>
             <td className={styles.td}>&quot;default&quot; | &quot;stroked&quot;</td>
-            <td className={styles.td}>"default"</td>
+            <td className={styles.td}>&quot;default&quot;</td>
             <td className={styles.td}>Visual variant of the card</td>
           </tr>
           <tr>
             <td className={styles.td}><code className={styles.code}>layout</code></td>
             <td className={styles.td}>&quot;horizontal&quot; | &quot;vertical&quot;</td>
-            <td className={styles.td}>"horizontal"</td>
+            <td className={styles.td}>&quot;horizontal&quot;</td>
             <td className={styles.td}>Layout direction</td>
           </tr>
           <tr>
             <td className={styles.td}><code className={styles.code}>mediaType</code></td>
             <td className={styles.td}>&quot;icon&quot; | &quot;image&quot; | &quot;none&quot;</td>
-            <td className={styles.td}>"none"</td>
+            <td className={styles.td}>&quot;none&quot;</td>
             <td className={styles.td}>Type of media to display</td>
           </tr>
           <tr>
             <td className={styles.td}><code className={styles.code}>icon</code></td>
             <td className={styles.td}>ReactNode</td>
             <td className={styles.td}>-</td>
-            <td className={styles.td}>Icon element (for mediaType="icon")</td>
+            <td className={styles.td}>Icon element (for mediaType=&quot;icon&quot;)</td>
           </tr>
           <tr>
             <td className={styles.td}><code className={styles.code}>imageSrc</code></td>
             <td className={styles.td}>string</td>
             <td className={styles.td}>-</td>
-            <td className={styles.td}>Image source (for mediaType="image")</td>
+            <td className={styles.td}>Image source (for mediaType=&quot;image&quot;)</td>
           </tr>
           <tr>
             <td className={styles.td}><code className={styles.code}>imageAlt</code></td>
             <td className={styles.td}>string</td>
-            <td className={styles.td}>""</td>
+            <td className={styles.td}>&quot;&quot;</td>
             <td className={styles.td}>Image alt text</td>
           </tr>
           <tr>

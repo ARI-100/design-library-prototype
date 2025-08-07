@@ -89,15 +89,15 @@ export default function InputsPage() {
           </tr>
           <tr>
             <td className={styles.td}><code className={styles.code}>state</code></td>
-            <td className={styles.td}>"default" | "error" | "disabled"</td>
-            <td className={styles.td}>"default"</td>
+            <td className={styles.td}>&quot;default&quot; | &quot;error&quot; | &quot;disabled&quot;</td>
+            <td className={styles.td}>&quot;default&quot;</td>
             <td className={styles.td}>State of the input field</td>
           </tr>
           <tr>
             <td className={styles.td}><code className={styles.code}>errorMessage</code></td>
             <td className={styles.td}>string</td>
             <td className={styles.td}>-</td>
-            <td className={styles.td}>Error message to display when state is "error"</td>
+            <td className={styles.td}>Error message to display when state is &quot;error&quot;</td>
           </tr>
           <tr>
             <td className={styles.td}><code className={styles.code}>helperText</code></td>

@@ -71,41 +71,41 @@ export const Card: React.FC<CardProps> = ({
       );
     }
 
-               if (mediaType === "image") {
-             return (
-               <div className={styles.media}>
-                 <div className={styles.mediaImage}>
-                   {imageSrc && (
-                     <Image 
-                       src={imageSrc} 
-                       alt={imageAlt} 
-                       width={160}
-                       height={160}
-                       style={{ objectFit: 'cover' }}
-                     />
-                   )}
-                 </div>
-               </div>
-             );
-           }
+    if (mediaType === "image") {
+      return (
+        <div className={styles.media}>
+          <div className={styles.mediaImage}>
+            {imageSrc && (
+              <Image 
+                src={imageSrc} 
+                alt={imageAlt} 
+                width={160}
+                height={160}
+                style={{ objectFit: 'cover' }}
+              />
+            )}
+          </div>
+        </div>
+      );
+    }
 
     return null;
   };
 
-           return (
-           <div className={cardClasses} onClick={onClick}>
-             {renderMedia()}
-             
-             <div className={styles.content}>
-               <div className={styles.textContent}>
-                 <h3 className={styles.title}>{title}</h3>
-                 {description && <p className={styles.description}>{description}</p>}
-               </div>
-               
-               {children && <div className={styles.children}>{children}</div>}
-               
-               {actions && <div className={styles.actions}>{actions}</div>}
-             </div>
-           </div>
-         );
+  return (
+    <div className={cardClasses} onClick={onClick}>
+      {renderMedia()}
+      
+      <div className={styles.content}>
+        <div className={styles.textContent}>
+          <h3 className={styles.title}>{title}</h3>
+          {description && <p className={styles.description}>{description}</p>}
+        </div>
+        
+        {children && <div className={styles.children}>{children}</div>}
+        
+        {actions && <div className={styles.actions}>{actions}</div>}
+      </div>
+    </div>
+  );
 }; 
