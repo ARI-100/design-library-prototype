@@ -29,10 +29,9 @@ const colorSpecs: ColorSpec[] = [
   { name: "Border Danger", variable: "--sds-color-border-danger-default", slug: "border-danger" },
 ];
 
-
-
-export default function SemanticColorDetail({ params }: { params: { slug: string } }) {
-  const spec = colorSpecs.find((c) => c.slug === params.slug);
+export default async function SemanticColorDetail({ params }: { params: Promise<{ slug: string }> }) {
+  const { slug } = await params;
+  const spec = colorSpecs.find((c) => c.slug === slug);
   if (!spec) notFound();
 
   // Raw value will be resolved client-side via CSS var; we show variable name only here.
