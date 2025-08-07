@@ -16,4 +16,5 @@
   font-family: var(--font-family-sans);
   font-size: var(--font-size-body-small);
   line-height: var(--line-height-body);
+  color: var(--sds-color-text-default-default);
 } 

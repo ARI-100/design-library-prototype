@@ -1,0 +1,24 @@
+.toggle {
+  background: var(--sds-color-background-default-secondary);
+  border: 1px solid var(--sds-color-border-default-default);
+  border-radius: var(--sds-size-radius-200);
+  padding: var(--sds-size-space-200);
+  font-size: 18px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 40px;
+  height: 40px;
+}
+
+.toggle:hover {
+  background: var(--sds-color-background-default-tertiary);
+  border-color: var(--sds-color-border-brand-default);
+}
+
+.toggle:focus {
+  outline: none;
+  box-shadow: 0 0 0 2px var(--sds-color-border-brand-default);
+} 

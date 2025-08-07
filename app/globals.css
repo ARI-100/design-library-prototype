@@ -85,9 +85,105 @@
   --color-pink-900: #57184a;
   --color-pink-1000: #3f1536;
 
+  /* Sizing – Spacing */
+  --sds-size-space-0: 0px;
+  --sds-size-space-50: 2px;
+  --sds-size-space-100: 4px;
+  --sds-size-space-150: 6px;
+  --sds-size-space-200: 8px;
+  --sds-size-space-300: 12px;
+  --sds-size-space-400: 16px;
+  --sds-size-space-600: 24px;
+  --sds-size-space-800: 32px;
+  --sds-size-space-1200: 48px;
+  --sds-size-space-1600: 64px;
+  --sds-size-space-2400: 96px;
+  --sds-size-space-4000: 160px;
+
+  /* Negative Spacing */
+  --sds-size-space-negative-100: -4px;
+  --sds-size-space-negative-200: -8px;
+  --sds-size-space-negative-300: -12px;
+  --sds-size-space-negative-400: -16px;
+  --sds-size-space-negative-600: -24px;
+
+  /* Radius */
+  --sds-size-radius-100: 4px;
+  --sds-size-radius-200: 8px;
+  --sds-size-radius-400: 16px;
+  --sds-size-radius-full: 9999px;
+
+  /* Depth (shadow offset or elevation units) */
+  --sds-size-depth-0: 0px;
+  --sds-size-depth-025: 1px;
+  --sds-size-depth-100: 4px;
+  --sds-size-depth-200: 8px;
+  --sds-size-depth-400: 16px;
+  --sds-size-depth-800: 32px;
+  --sds-size-depth-1200: 48px;
+  --sds-size-depth-negative-025: -1px;
+  --sds-size-depth-negative-100: -4px;
+  --sds-size-depth-negative-200: -8px;
+  --sds-size-depth-negative-400: -16px;
+  --sds-size-depth-negative-800: -32px;
+  --sds-size-depth-negative-1200: -48px;
+
+  /* Stroke & Blur */
+  --sds-size-stroke-border: 1px;
+  --sds-size-stroke-focus-ring: 2px;
+  --sds-size-blur-100: 4px;
+
+  /* Icon */
+  --sds-size-icon-small: 24px;
+  --sds-size-icon-medium: 32px;
+  --sds-size-icon-large: 40px;
+
+  /* Colors – White & Black */
+  --color-white-1000: #ffffff;
+  --color-white-500: rgba(255, 255, 255, 0.7);
+  --color-white-400: rgba(255, 255, 255, 0.4);
+  --color-black-1000: #0c0c0d;
+
+  /* Semantic Colors – Background */
+  --sds-color-background-default-default: var(--color-white-1000);
+  --sds-color-background-default-secondary: var(--color-gray-100);
+  --sds-color-background-default-tertiary: var(--color-gray-300);
+  --sds-color-background-brand-default: var(--color-brand-800);
+  --sds-color-background-brand-secondary: var(--color-brand-200);
+  --sds-color-background-brand-hover: var(--color-brand-900);
+  --sds-color-background-positive-default: var(--color-green-500);
+  --sds-color-background-warning-default: var(--color-yellow-400);
+  --sds-color-background-danger-default: var(--color-red-500);
+  --sds-color-background-disabled-default: var(--color-gray-300);
+
+  /* Semantic Colors – Text */
+  --sds-color-text-default-default: var(--color-gray-900);
+  --sds-color-text-default-secondary: var(--color-gray-500);
+  --sds-color-text-default-tertiary: var(--color-gray-400);
+  --sds-color-text-brand-default: var(--color-brand-800);
+  --sds-color-text-positive-default: var(--color-green-800);
+  --sds-color-text-warning-default: var(--color-yellow-900);
+  --sds-color-text-danger-default: var(--color-red-700);
+  --sds-color-text-disabled-default: var(--color-gray-300);
+
+  /* Semantic Colors – Icon */
+  --sds-color-icon-default-default: var(--color-gray-900);
+  --sds-color-icon-brand-default: var(--color-brand-800);
+  --sds-color-icon-positive-default: var(--color-green-800);
+  --sds-color-icon-warning-default: var(--color-yellow-900);
+  --sds-color-icon-danger-default: var(--color-red-700);
+  --sds-color-icon-disabled-default: var(--color-gray-400);
+
+  /* Semantic Colors – Border */
+  --sds-color-border-default-default: var(--color-gray-300);
+  --sds-color-border-brand-default: var(--color-brand-800);
+  --sds-color-border-positive-default: var(--color-green-800);
+  --sds-color-border-warning-default: var(--color-yellow-900);
+  --sds-color-border-danger-default: var(--color-red-700);
+
   /* Colors – Element backgrounds */
-  --background: var(--color-gray-1000);
-  --foreground: var(--color-gray-100);
+  --background: var(--color-white-1000);
+  --foreground: var(--color-gray-900);
 
   /* Typography – font families */
   --font-family-sans: 'Inter', Arial, sans-serif;
@@ -117,10 +213,88 @@
   --tracking-tighter: -0.03em;         /* -3% */
 }
 
+/* Manual dark mode support */
+.dark {
+  --background: var(--color-gray-900);
+  --foreground: var(--color-white-1000);
+  /* Semantic Colors – Background (dark override) */
+  --sds-color-background-default-default: var(--color-gray-900);
+  --sds-color-background-default-secondary: var(--color-gray-800);
+  --sds-color-background-default-tertiary: var(--color-gray-600);
+  --sds-color-background-brand-default: var(--color-brand-100);
+  --sds-color-background-brand-secondary: var(--color-brand-600);
+  --sds-color-background-brand-hover: var(--color-brand-300);
+  --sds-color-background-positive-default: var(--color-green-700);
+  --sds-color-background-warning-default: var(--color-yellow-400);
+  --sds-color-background-danger-default: var(--color-red-600);
+  --sds-color-background-disabled-default: var(--color-gray-300);
+
+  /* Semantic Colors – Text (dark override) */
+  --sds-color-text-default-default: var(--color-white-1000);
+  --sds-color-text-default-secondary: var(--color-white-500);
+  --sds-color-text-default-tertiary: var(--color-white-400);
+  --sds-color-text-brand-default: var(--color-brand-100);
+  --sds-color-text-positive-default: var(--color-green-200);
+  --sds-color-text-warning-default: var(--color-yellow-200);
+  --sds-color-text-danger-default: var(--color-red-200);
+  --sds-color-text-disabled-default: var(--color-gray-300);
+
+  /* Semantic Colors – Icon (dark override) */
+  --sds-color-icon-default-default: var(--color-white-1000);
+  --sds-color-icon-brand-default: var(--color-brand-100);
+  --sds-color-icon-positive-default: var(--color-green-200);
+  --sds-color-icon-warning-default: var(--color-yellow-200);
+  --sds-color-icon-danger-default: var(--color-red-200);
+  --sds-color-icon-disabled-default: var(--color-gray-400);
+
+  /* Semantic Colors – Border (dark override) */
+  --sds-color-border-default-default: var(--color-gray-700);
+  --sds-color-border-brand-default: var(--color-brand-100);
+  --sds-color-border-positive-default: var(--color-green-200);
+  --sds-color-border-warning-default: var(--color-yellow-200);
+  --sds-color-border-danger-default: var(--color-red-200);
+}
+
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+    --background: var(--color-gray-900);
+    --foreground: var(--color-white-1000);
+    /* Semantic Colors – Background (dark override) */
+    --sds-color-background-default-default: var(--color-gray-900);
+    --sds-color-background-default-secondary: var(--color-gray-800);
+    --sds-color-background-default-tertiary: var(--color-gray-600);
+    --sds-color-background-brand-default: var(--color-brand-100);
+    --sds-color-background-brand-secondary: var(--color-brand-600);
+    --sds-color-background-brand-hover: var(--color-brand-300);
+    --sds-color-background-positive-default: var(--color-green-700);
+    --sds-color-background-warning-default: var(--color-yellow-400);
+    --sds-color-background-danger-default: var(--color-red-600);
+    --sds-color-background-disabled-default: var(--color-gray-300);
+
+    /* Semantic Colors – Text (dark override) */
+    --sds-color-text-default-default: var(--color-white-1000);
+    --sds-color-text-default-secondary: var(--color-white-500);
+    --sds-color-text-default-tertiary: var(--color-white-400);
+    --sds-color-text-brand-default: var(--color-brand-100);
+    --sds-color-text-positive-default: var(--color-green-200);
+    --sds-color-text-warning-default: var(--color-yellow-200);
+    --sds-color-text-danger-default: var(--color-red-200);
+    --sds-color-text-disabled-default: var(--color-gray-300);
+
+    /* Semantic Colors – Icon (dark override) */
+    --sds-color-icon-default-default: var(--color-white-1000);
+    --sds-color-icon-brand-default: var(--color-brand-100);
+    --sds-color-icon-positive-default: var(--color-green-200);
+    --sds-color-icon-warning-default: var(--color-yellow-200);
+    --sds-color-icon-danger-default: var(--color-red-200);
+    --sds-color-icon-disabled-default: var(--color-gray-400);
+
+    /* Semantic Colors – Border (dark override) */
+    --sds-color-border-default-default: var(--color-gray-700);
+    --sds-color-border-brand-default: var(--color-brand-100);
+    --sds-color-border-positive-default: var(--color-green-200);
+    --sds-color-border-warning-default: var(--color-yellow-200);
+    --sds-color-border-danger-default: var(--color-red-200);
   }
 }
 

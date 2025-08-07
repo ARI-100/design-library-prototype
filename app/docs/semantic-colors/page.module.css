@@ -16,6 +16,15 @@
   font-weight: var(--font-weight-semibold);
 }
 
-.sample {
+.swatch {
   display: inline-block;
+  width: 80px;
+  height: 24px;
+  border-radius: 4px;
+  border: 1px solid var(--sds-color-border-default-default);
+}
+
+.link {
+  color: var(--sds-color-text-brand-default);
+  text-decoration: underline;
 } 

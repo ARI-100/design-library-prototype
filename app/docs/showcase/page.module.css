@@ -1,0 +1,106 @@
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0;
+}
+
+.header {
+  margin-bottom: var(--sds-size-space-1200); /* 48px */
+}
+
+.title {
+  font-size: var(--font-size-title-page); /* 48px */
+  font-weight: var(--font-weight-bold);
+  color: var(--sds-color-text-default-default);
+  margin: 0 0 var(--sds-size-space-400) 0; /* 0 0 16px 0 */
+  line-height: var(--line-height-heading);
+}
+
+.subtitle {
+  font-size: var(--font-size-body-base); /* 16px */
+  color: var(--sds-color-text-default-secondary);
+  margin: 0;
+  line-height: var(--line-height-body);
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  gap: var(--sds-size-space-1200); /* 48px */
+}
+
+.formSection {
+  max-width: 800px;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: var(--sds-size-space-600); /* 24px */
+}
+
+.formRow {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--sds-size-space-400); /* 16px */
+}
+
+.formActions {
+  display: flex;
+  gap: var(--sds-size-space-400); /* 16px */
+  justify-content: flex-end;
+}
+
+.componentsSection {
+  margin-top: var(--sds-size-space-800); /* 32px */
+}
+
+.sectionTitle {
+  font-size: var(--font-size-subtitle); /* 32px */
+  font-weight: var(--font-weight-semibold);
+  color: var(--sds-color-text-default-default);
+  margin: 0 0 var(--sds-size-space-600) 0; /* 0 0 24px 0 */
+  line-height: var(--line-height-heading);
+}
+
+.componentGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: var(--sds-size-space-600); /* 24px */
+}
+
+.buttonExamples {
+  display: flex;
+  gap: var(--sds-size-space-200); /* 8px */
+  flex-wrap: wrap;
+}
+
+.inputExamples {
+  display: flex;
+  flex-direction: column;
+  gap: var(--sds-size-space-300); /* 12px */
+}
+
+.successSection {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .formRow {
+    grid-template-columns: 1fr;
+  }
+  
+  .componentGrid {
+    grid-template-columns: 1fr;
+  }
+  
+  .buttonExamples {
+    flex-direction: column;
+  }
+  
+  .title {
+    font-size: var(--font-size-subtitle); /* 32px */
+  }
+} 

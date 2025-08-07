@@ -1,0 +1,27 @@
+.container {
+  font-family: var(--font-family-sans);
+  padding: 24px;
+  color: var(--sds-color-text-default-default);
+}
+
+.swatch {
+  width: 160px;
+  height: 80px;
+  border-radius: 8px;
+  border: 1px solid var(--sds-color-border-default-default);
+  margin-bottom: 24px;
+}
+
+.container dl {
+  margin: 0;
+}
+
+.container dt {
+  font-weight: var(--font-weight-semibold);
+  color: var(--sds-color-text-default-default);
+}
+
+.container dd {
+  margin: 0 0 12px 0;
+  color: var(--sds-color-text-default-secondary);
+} 
