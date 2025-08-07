@@ -197,20 +197,20 @@ export default function ShowcasePage() {
                   <TextInput
                     id="example-default"
                     placeholder="Default state"
-                    size="small"
+                    inputSize="small"
                   />
                   <TextInput
                     id="example-error"
                     placeholder="Error state"
                     state="error"
                     errorMessage="This field has an error"
-                    size="small"
+                    inputSize="small"
                   />
                   <TextInput
                     id="example-disabled"
                     placeholder="Disabled state"
                     state="disabled"
-                    size="small"
+                    inputSize="small"
                   />
                 </div>
               }

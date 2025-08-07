@@ -10,7 +10,7 @@ type TextInputProps = React.InputHTMLAttributes<HTMLInputElement> & {
   /** State of the input field */
   state?: TextInputState;
   /** Size of the input field */
-  size?: TextInputSize;
+  inputSize?: TextInputSize;
   /** Error message to display when state is "error" */
   errorMessage?: string;
   /** Helper text to display below the input */
@@ -26,7 +26,7 @@ export const TextInput = React.forwardRef<HTMLInputElement, TextInputProps>(
     {
       label,
       state = "default",
-      size = "medium",
+      inputSize = "medium",
       errorMessage,
       helperText,
       className,
@@ -40,7 +40,7 @@ export const TextInput = React.forwardRef<HTMLInputElement, TextInputProps>(
 
     const containerClasses = classNames(
       styles.container,
-      styles[`size${size.charAt(0).toUpperCase() + size.slice(1)}` as const],
+      styles[`size${inputSize.charAt(0).toUpperCase() + inputSize.slice(1)}` as const],
       state === "error" && styles.stateError,
       isDisabled && styles.stateDisabled,
       className
