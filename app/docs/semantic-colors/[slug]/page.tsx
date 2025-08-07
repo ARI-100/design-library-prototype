@@ -29,14 +29,7 @@ const colorSpecs: ColorSpec[] = [
   { name: "Border Danger", variable: "--sds-color-border-danger-default", slug: "border-danger" },
 ];
 
-function cssVarToHex(value: string) {
-  if (!value) return "";
-  // value is rgb(r g b / a) or rgb(r, g, b)
-  const ctx = document.createElement("canvas").getContext("2d");
-  if (!ctx) return value;
-  ctx.fillStyle = value;
-  return ctx.fillStyle; // canvas normalizes to hex
-}
+
 
 export default function SemanticColorDetail({ params }: { params: { slug: string } }) {
   const spec = colorSpecs.find((c) => c.slug === params.slug);

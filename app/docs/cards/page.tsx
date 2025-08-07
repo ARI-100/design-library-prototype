@@ -75,7 +75,7 @@ export default function CardsPage() {
   return (
     <div>
       <h1 className={styles.heading}>Cards</h1>
-      <p>Cards are versatile containers that can display content with optional media, actions, and different layouts. They're perfect for displaying information in a structured way.</p>
+      <p>Cards are versatile containers that can display content with optional media, actions, and different layouts. They&apos;re perfect for displaying information in a structured way.</p>
       
       <h2 className={styles.sectionHeading}>Examples</h2>
       <table className={styles.table}>
