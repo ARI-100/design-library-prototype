@@ -1,4 +1,5 @@
 import React from "react";
+import Image from "next/image";
 import styles from "./Card.module.css";
 
 export type CardVariant = "default" | "stroked";
@@ -70,15 +71,23 @@ export const Card: React.FC<CardProps> = ({
       );
     }
 
-    if (mediaType === "image") {
-      return (
-        <div className={styles.media}>
-          <div className={styles.mediaImage}>
-            {imageSrc && <img src={imageSrc} alt={imageAlt} />}
-          </div>
-        </div>
-      );
-    }
+               if (mediaType === "image") {
+             return (
+               <div className={styles.media}>
+                 <div className={styles.mediaImage}>
+                   {imageSrc && (
+                     <Image 
+                       src={imageSrc} 
+                       alt={imageAlt} 
+                       width={160}
+                       height={160}
+                       style={{ objectFit: 'cover' }}
+                     />
+                   )}
+                 </div>
+               </div>
+             );
+           }
 
     return null;
   };

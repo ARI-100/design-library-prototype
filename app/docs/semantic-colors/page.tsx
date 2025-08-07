@@ -32,6 +32,27 @@ const colorSpecs: (ColorSpec & { slug: string })[] = [
   { name: "Border Danger", variable: "--sds-color-border-danger-default", slug: "border-danger" },
 ];
 
+function ColorRow({ spec }: { spec: ColorSpec & { slug: string } }) {
+  const [val, setVal] = useState<string>("");
+  
+  useEffect(() => {
+    const v = getComputedStyle(document.documentElement).getPropertyValue(spec.variable).trim();
+    setVal(v);
+  }, [spec.variable]);
+  
+  return (
+    <tr key={spec.variable}>
+      <td className={styles.td}>
+        <Link className={styles.link} href={`/docs/semantic-colors/${spec.slug}`}>{spec.name}</Link>
+      </td>
+      <td className={styles.td}>
+        <span className={styles.swatch} style={{ background: `var(${spec.variable})` }} />
+      </td>
+      <td className={styles.td} style={{fontFamily:"monospace"}}>{val}</td>
+    </tr>
+  );
+}
+
 export default function SemanticColorsPage() {
   return (
     <div>
@@ -45,24 +66,9 @@ export default function SemanticColorsPage() {
           </tr>
         </thead>
         <tbody>
-          {colorSpecs.map((spec) => {
-            const [val, setVal] = useState<string>("");
-            useEffect(() => {
-              const v = getComputedStyle(document.documentElement).getPropertyValue(spec.variable).trim();
-              setVal(v);
-            }, []);
-            return (
-              <tr key={spec.variable}>
-                <td className={styles.td}>
-                  <Link className={styles.link} href={`/docs/semantic-colors/${spec.slug}`}>{spec.name}</Link>
-                </td>
-                <td className={styles.td}>
-                  <span className={styles.swatch} style={{ background: `var(${spec.variable})` }} />
-                </td>
-                <td className={styles.td} style={{fontFamily:"monospace"}}>{val}</td>
-              </tr>
-            );
-          })}
+          {colorSpecs.map((spec) => (
+            <ColorRow key={spec.variable} spec={spec} />
+          ))}
         </tbody>
       </table>
     </div>

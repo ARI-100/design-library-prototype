@@ -13,7 +13,7 @@ export default function CardsPage() {
           actions={<Button size="small">Action</Button>}
         />
       ),
-      usage: '<Card title="Card Title" description="Description" actions={<Button>Action</Button>} />'
+      usage: '&lt;Card title=&quot;Card Title&quot; description=&quot;Description&quot; actions={&lt;Button&gt;Action&lt;/Button&gt;} /&gt;'
     },
     {
       name: "With Icon",
@@ -26,7 +26,7 @@ export default function CardsPage() {
           actions={<Button size="small">View</Button>}
         />
       ),
-      usage: '<Card title="Icon Card" mediaType="icon" icon="📱" actions={<Button>View</Button>} />'
+      usage: '&lt;Card title=&quot;Icon Card&quot; mediaType=&quot;icon&quot; icon=&quot;📱&quot; actions={&lt;Button&gt;View&lt;/Button&gt;} /&gt;'
     },
     {
       name: "With Image",
@@ -40,7 +40,7 @@ export default function CardsPage() {
           actions={<Button size="small">Details</Button>}
         />
       ),
-      usage: '<Card title="Image Card" mediaType="image" imageSrc="..." imageAlt="..." />'
+      usage: '&lt;Card title=&quot;Image Card&quot; mediaType=&quot;image&quot; imageSrc=&quot;...&quot; imageAlt=&quot;...&quot; /&gt;'
     },
     {
       name: "Vertical Layout",
@@ -54,7 +54,7 @@ export default function CardsPage() {
           actions={<Button size="small">Learn More</Button>}
         />
       ),
-      usage: '<Card title="Vertical Card" layout="vertical" mediaType="icon" icon="🎨" />'
+      usage: '&lt;Card title=&quot;Vertical Card&quot; layout=&quot;vertical&quot; mediaType=&quot;icon&quot; icon=&quot;🎨&quot; /&gt;'
     },
     {
       name: "Stroked Variant",
@@ -68,7 +68,7 @@ export default function CardsPage() {
           actions={<Button size="small" variant="subtle">Dismiss</Button>}
         />
       ),
-      usage: '<Card title="Stroked Card" variant="stroked" mediaType="icon" icon="✨" />'
+      usage: '&lt;Card title=&quot;Stroked Card&quot; variant=&quot;stroked&quot; mediaType=&quot;icon&quot; icon=&quot;✨&quot; /&gt;'
     }
   ];
 
@@ -139,19 +139,19 @@ export default function CardsPage() {
         <tbody>
           <tr>
             <td className={styles.td}><code className={styles.code}>variant</code></td>
-            <td className={styles.td}>"default" | "stroked"</td>
+            <td className={styles.td}>&quot;default&quot; | &quot;stroked&quot;</td>
             <td className={styles.td}>"default"</td>
             <td className={styles.td}>Visual variant of the card</td>
           </tr>
           <tr>
             <td className={styles.td}><code className={styles.code}>layout</code></td>
-            <td className={styles.td}>"horizontal" | "vertical"</td>
+            <td className={styles.td}>&quot;horizontal&quot; | &quot;vertical&quot;</td>
             <td className={styles.td}>"horizontal"</td>
             <td className={styles.td}>Layout direction</td>
           </tr>
           <tr>
             <td className={styles.td}><code className={styles.code}>mediaType</code></td>
-            <td className={styles.td}>"icon" | "image" | "none"</td>
+            <td className={styles.td}>&quot;icon&quot; | &quot;image&quot; | &quot;none&quot;</td>
             <td className={styles.td}>"none"</td>
             <td className={styles.td}>Type of media to display</td>
           </tr>

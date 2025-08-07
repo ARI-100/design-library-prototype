@@ -43,7 +43,6 @@ export default function SemanticColorDetail({ params }: { params: { slug: string
   if (!spec) notFound();
 
   // Raw value will be resolved client-side via CSS var; we show variable name only here.
-  const hex = typeof window !== "undefined" ? cssVarToHex(spec.variable) : "";
 
   return (
     <div className={styles.container}>

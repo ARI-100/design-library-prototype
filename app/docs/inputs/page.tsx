@@ -7,27 +7,27 @@ export default function InputsPage() {
     {
       name: "Default",
       component: <TextInput id="default" placeholder="Enter text..." />,
-      usage: '<TextInput id="default" placeholder="Enter text..." />'
+      usage: '&lt;TextInput id=&quot;default&quot; placeholder=&quot;Enter text...&quot; /&gt;'
     },
     {
       name: "With Label",
       component: <TextInput id="with-label" label="Email Address" placeholder="Enter your email..." />,
-      usage: '<TextInput id="with-label" label="Email Address" placeholder="Enter your email..." />'
+      usage: '&lt;TextInput id=&quot;with-label&quot; label=&quot;Email Address&quot; placeholder=&quot;Enter your email...&quot; /&gt;'
     },
     {
       name: "With Helper Text",
       component: <TextInput id="with-helper" label="Password" type="password" helperText="Must be at least 8 characters" />,
-      usage: '<TextInput id="with-helper" label="Password" type="password" helperText="Must be at least 8 characters" />'
+      usage: '&lt;TextInput id=&quot;with-helper&quot; label=&quot;Password&quot; type=&quot;password&quot; helperText=&quot;Must be at least 8 characters&quot; /&gt;'
     },
     {
       name: "Error State",
       component: <TextInput id="error" label="Email" state="error" errorMessage="Please enter a valid email address" />,
-      usage: '<TextInput id="error" label="Email" state="error" errorMessage="Please enter a valid email address" />'
+      usage: '&lt;TextInput id=&quot;error&quot; label=&quot;Email&quot; state=&quot;error&quot; errorMessage=&quot;Please enter a valid email address&quot; /&gt;'
     },
     {
       name: "Disabled",
       component: <TextInput id="disabled" label="Disabled Field" state="disabled" value="Cannot edit this" />,
-      usage: '<TextInput id="disabled" label="Disabled Field" state="disabled" value="Cannot edit this" />'
+      usage: '&lt;TextInput id=&quot;disabled&quot; label=&quot;Disabled Field&quot; state=&quot;disabled&quot; value=&quot;Cannot edit this&quot; /&gt;'
     }
   ];
 
